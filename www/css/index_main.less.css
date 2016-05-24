@@ -409,3 +409,20 @@ body#afui .splt {
     width: 50px;
   }
 }
+.ui-btn-hidden {
+  display: none;
+}
+.left-receptacle {
+  float: left;
+}
+.right-receptacle {
+  float: right;
+}
+[data-uib="media/text"] p:first-of-type {
+  margin-top: 0px;
+}
+.ellipsis {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
