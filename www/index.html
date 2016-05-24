@@ -5,6 +5,7 @@
   -->
 
     <head>
+        <link rel="stylesheet" type="text/css" href="icon-fonts/elusive-icons-2.0.0/css/elusive-icons.css">
         <link rel="stylesheet" type="text/css" href="media_button_bar/css/media_button_bar.css">
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="jqm/jquery.mobile-min.css">
@@ -87,6 +88,7 @@
         <script type="application/javascript" src="google_maps/google_maps.js"></script>
         <script type="application/javascript" src="js/index_user_scripts.js"></script>
         <script src="http://debug-software.intel.com/target/target-script-min.js#5PLNd6hu7l7XkECuAMx7A41wSr9baSUTbEZGdwnNsiw"></script>
+        <script type="application/javascript" src="camera/cordova-cam.js"></script>
     </head>
 
     <body>
@@ -120,7 +122,8 @@
                     <div class="widget-container content-area horiz-area wrapping-col left"></div>
                     <div class="widget-container content-area horiz-area wrapping-col right"></div>
                 </div>
-                <div class="upage-content ac0 content-area vertical-col left"><a class="widget uib_w_12 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true" id="btnHome" href="#Homescreen" data-transition="fade">Home</a>
+                <div class="upage-content ac0 content-area vertical-col left" id="page_18_21"><a class="widget uib_w_12 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnHome" href="#Homescreen" data-transition="fade" data-icon="carat-l" data-iconpos="left" data-mini="true">Home</a>
+                    <div class="widget uib_w_16 maps-size d-margins" data-uib="media/google_maps" data-ver="0" data-rpath="null" data-zoom="8"></div>
                 </div>
             </div>
         </div>
@@ -132,7 +135,13 @@
                     <div class="widget-container content-area horiz-area wrapping-col left"></div>
                     <div class="widget-container content-area horiz-area wrapping-col right"></div>
                 </div>
-                <div class="upage-content ac0 content-area vertical-col left"><a class="widget uib_w_5 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true" id="btnHome" href="#Homescreen" data-transition="fade">Home</a>
+                <div class="upage-content ac0 content-area vertical-col left" id="page_19_69"><a class="widget uib_w_5 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true" id="btnHome" href="#Homescreen" data-transition="fade">Home</a>
+                    <div class="widget scale-image uib_w_15 d-margins" data-uib="media/img" data-ver="0">
+                        <figure class="figure-align">
+                            <img src="images/Strabburg.jpg" id="IMAGE">
+                            <figcaption data-position="bottom"></figcaption>
+                        </figure>
+                    </div><a class="widget uib_w_15" data-uib="jquery_mobile/button" data-ver="0" data-role="button" onclick="capturePhoto('.uib_w_15 img')">Camera</a>
                 </div>
             </div>
         </div>
@@ -144,7 +153,7 @@
                     <div class="widget-container content-area horiz-area wrapping-col left"></div>
                     <div class="widget-container content-area horiz-area wrapping-col right"></div>
                 </div>
-                <div class="upage-content ac0 content-area vertical-col left"><a class="widget uib_w_13 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnNeuesFoto" href="#Foto" data-transition="fade">Neues Foto</a><a class="widget uib_w_9 d-margins" data-uib="jquery_mobile/button"
+                <div class="upage-content ac0 content-area vertical-col left" id="page_20_5"><a class="widget uib_w_13 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnNeuesFoto" href="#Foto" data-transition="fade">Neues Foto</a><a class="widget uib_w_9 d-margins" data-uib="jquery_mobile/button"
                     data-ver="0" data-role="button" id="btnMap" href="#Map" data-transition="fade">Map</a>
                     <div class="tarea widget uib_w_10 d-margins" data-uib="media/text" data-ver="0" name="uib_w_10">
                         <div class="widget-container left-receptacle"></div>

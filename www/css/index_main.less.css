@@ -356,12 +356,10 @@ body#afui .splt {
   .wrapping-col > .d-margins,
   .wrapping-col > .afScrollPanel > .d-margins {
     margin-left: 6px;
-    margin-right: 6px;
   }
   .wrapping-col > .d-margins,
   .wrapping-col > .afScrollPanel > .d-margins {
     margin-left: 6px;
-    margin-right: 6px;
   }
   .d-margins {
     margin-bottom: 10px;
@@ -425,4 +423,15 @@ body#afui .splt {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+}
+.figure-align {
+  display: table;
+  margin: 0px auto;
+}
+.figure-align img {
+  width: 100%;
+}
+.image-cell {
+  display: table-cell;
+  vertical-align: middle;
 }
