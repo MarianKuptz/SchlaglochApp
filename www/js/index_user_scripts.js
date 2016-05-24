@@ -12,8 +12,16 @@
      /* graphic button  #btnFoto */
     $(document).on("click", "#btnFoto", function(evt)
     {
-        /* your code goes here */
-         return false;
+       navigator.camera.cleanup(onSuccess, onFail);
+
+        function onSuccess() {
+            alert("Camera cleanup success.");
+        }
+
+        function onFail(message) {
+            alert('Failed because: ' + message);
+        }
+
     });
 
     }
