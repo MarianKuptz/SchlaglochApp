@@ -95,22 +95,30 @@
         <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
         <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
         <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
-        <div class="upage" id="mainpage" data-role="page">
+        <div class="upage" id="Homescreen" data-role="page">
             <div class="upage-outer">
-                <div data-role="header" class="container-group inner-element uib_w_1" data-uib="jquery_mobile/header" data-ver="0">
-                    <h1>Schlagloch Application</h1>
+                <div data-role="header" class="container-group inner-element uib_w_7" data-uib="jquery_mobile/header" data-ver="0">
+                    <h1>SchlaglochApp</h1>
                     <div class="widget-container wrapping-col single-centered"></div>
                     <div class="widget-container content-area horiz-area wrapping-col left"></div>
                     <div class="widget-container content-area horiz-area wrapping-col right"></div>
                 </div>
-                <div class="upage-content ac0 content-area vertical-col left" id="page_18_48">
-                    <div class="widget uib_w_2 maps-size d-margins" data-uib="media/google_maps" data-ver="0" data-rpath="null" data-zoom="8"></div>
-                    <a class="uib-graphic-button default-graphic-sizing default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_3 d-margins media-button-text-bottom" data-uib="media/graphic_button" data-ver="0"
-                    href="#" id="btnFoto">
-                        <img src="images/Arrow.png">
-                        <span class="uib-caption">Button</span>
-                    </a>
-                    <a class="widget uib_w_6 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" href="#Foto" data-transition="fade">Foto</a>
+                <div class="upage-content ac0 content-area vertical-col left" id="page_20_5"><a class="widget uib_w_13 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnNeuesFoto" href="#Foto" data-transition="fade">Neues Foto</a><a class="widget uib_w_9 d-margins" data-uib="jquery_mobile/button"
+                    data-ver="0" data-role="button" id="btnMap" href="#Map" data-transition="fade">Map</a>
+                    <div class="tarea widget uib_w_10 d-margins" data-uib="media/text" data-ver="0" name="uib_w_10">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container">
+                            <p>Ist ihr GPS aktiviert?</p>
+                        </div>
+                    </div>
+                    <div class="tarea widget uib_w_20 d-margins" data-uib="media/text" data-ver="0" name="uib_w_20">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container">
+                            <p>Wirken Sie aktiv mit und verbesseren Sie mit uns die Infrastruktur der Stadt!</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -135,33 +143,23 @@
                     <div class="widget-container content-area horiz-area wrapping-col left"></div>
                     <div class="widget-container content-area horiz-area wrapping-col right"></div>
                 </div>
-                <div class="upage-content ac0 content-area vertical-col left" id="page_19_69"><a class="widget uib_w_5 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true" id="btnHome" href="#Homescreen" data-transition="fade">Home</a>
+                <div class="upage-content ac0 content-area vertical-col left" id="page_19_69"><a class="widget uib_w_5 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true" id="btnHome" href="#Homescreen" data-transition="fade" data-icon="carat-l" data-iconpos="notext">Home</a>
                     <div class="widget scale-image uib_w_15 d-margins" data-uib="media/img" data-ver="0">
                         <figure class="figure-align">
                             <img src="images/Strabburg.jpg" id="IMAGE">
+
                             <figcaption data-position="bottom"></figcaption>
                         </figure>
-                    </div><a class="widget uib_w_15" data-uib="jquery_mobile/button" data-ver="0" data-role="button" onclick="capturePhoto('.uib_w_15 img')">Camera</a>
-                </div>
-            </div>
-        </div>
-        <div class="upage" id="Homescreen" data-role="page">
-            <div class="upage-outer">
-                <div data-role="header" class="container-group inner-element uib_w_7" data-uib="jquery_mobile/header" data-ver="0">
-                    <h1>SchlaglochApp</h1>
-                    <div class="widget-container wrapping-col single-centered"></div>
-                    <div class="widget-container content-area horiz-area wrapping-col left"></div>
-                    <div class="widget-container content-area horiz-area wrapping-col right"></div>
-                </div>
-                <div class="upage-content ac0 content-area vertical-col left" id="page_20_5"><a class="widget uib_w_13 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnNeuesFoto" href="#Foto" data-transition="fade">Neues Foto</a><a class="widget uib_w_9 d-margins" data-uib="jquery_mobile/button"
-                    data-ver="0" data-role="button" id="btnMap" href="#Map" data-transition="fade">Map</a>
-                    <div class="tarea widget uib_w_10 d-margins" data-uib="media/text" data-ver="0" name="uib_w_10">
+                    </div>
+                    <div class="tarea widget uib_w_17 d-margins" data-uib="media/text" data-ver="0" name="uib_w_17">
                         <div class="widget-container left-receptacle"></div>
                         <div class="widget-container right-receptacle"></div>
                         <div class="text-container">
-                            <p>Ist ihr GPS aktiviert?</p>
+                            <p>GPS-Koordinaten</p>
                         </div>
-                    </div>
+                    </div><a class="widget uib_w_15" data-uib="jquery_mobile/button" data-ver="0" data-role="button" onclick="capturePhoto('.uib_w_15 img')" data-icon="camera" data-iconpos="notext">Camera</a>
+                    <a class="widget uib_w_18 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnVerwerfen">Foto verwerfen</a><a class="widget uib_w_19 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button"
+                    id="btnSpeichern">speichern/hochladen</a>
                 </div>
             </div>
         </div>

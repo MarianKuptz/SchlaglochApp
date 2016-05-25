@@ -435,3 +435,8 @@ body#afui .splt {
   display: table-cell;
   vertical-align: middle;
 }
+@media all {
+  .FotoSize img {
+    height: 200px;
+  }
+}
