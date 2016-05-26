@@ -8,7 +8,7 @@
  function register_event_handlers()
  {
 
-
+     alert("hallo");
      /* graphic button  #btnFoto */
     $(document).on("click", "#btnFoto", function(evt)
     {
