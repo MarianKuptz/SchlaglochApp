@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "jsapp/template-blank-cordova-ad-project/sample.zip",
       "projectGuid": "c27d6f7f-47b0-436f-b20f-994a97273979",
-      "lastModifiedDate": 1464278056365,
+      "lastModifiedDate": 1466712664070,
       "creationDate": 1464075217134
     },
     "XDK-app-designer": "true",
@@ -122,6 +122,47 @@
         "description": "Cordova Geolocation Plugin",
         "data": {},
         "dependedBy": []
+      },
+      {
+        "id": "cordova-plugin-ms-azure-mobile-engagement",
+        "name": "Azure Mobile Engagement",
+        "version": "3.0.2",
+        "originType": "repo",
+        "origin": "https://github.com/Azure/azure-mobile-engagement-cordova.git",
+        "gitref": "",
+        "subdir": ".",
+        "paramvals": {
+          "AZME_ACTION_URL": "null",
+          "AZME_ENABLE_PLUGIN_LOG": "true",
+          "AZME_ENABLE_NATIVE_LOG": "true",
+          "AZME_ANDROID_GOOGLE_PROJECT_NUMBER": "null",
+          "AZME_ANDROID_REACH_ICON": "icon",
+          "AZME_ANDROID_CONNECTION_STRING": "https://github.com/Azure/azure-mobile-engagement-cordova.git",
+          "AZME_IOS_CONNECTION_STRING": "http://schlaglochapp.azurewebsites.net",
+          "AZME_IOS_REACH_ICON": "icon.png"
+        },
+        "sourceLocation": "plugins/cordova-plugin-ms-azure-mobile-engagement",
+        "selectedState": "Included",
+        "checksum": "11ca4148",
+        "dependsOn": [],
+        "topLevel": true,
+        "author": "Olivier Goguel",
+        "permissions": {
+          "android:name": [
+            "android.permission.INTERNET",
+            "android.permission.ACCESS_NETWORK_STATE",
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            "android.permission.DOWNLOAD_WITHOUT_NOTIFICATION",
+            "android.permission.VIBRATE",
+            "com.google.android.c2dm.permission.RECEIVE",
+            "${applicationId}.permission.C2D_MESSAGE"
+          ]
+        },
+        "description": "Azure Mobile Engagement",
+        "data": {},
+        "dependedBy": [],
+        "custom": "true"
       }
     ],
     "buildConfigurations": {

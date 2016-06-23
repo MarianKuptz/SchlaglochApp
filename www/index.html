@@ -26,6 +26,7 @@
 
         <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
         <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
 
         <style>
@@ -81,6 +82,7 @@
         <script src="js/init-app.js"></script>
         <!-- for your init code, see README and file comments for details -->
         <script src="xdk/init-dev.js"></script>
+        <script src="js/db.js"></script>
         <!-- normalizes device and document ready events, see file for details -->
         <script type="application/javascript" src="lib/jquery.min.js"></script>
         <script type="application/javascript" src="jqm/jquery.mobile-min.js" data-ver="0"></script>
@@ -103,13 +105,13 @@
                     <div class="widget-container content-area horiz-area wrapping-col left"></div>
                     <div class="widget-container content-area horiz-area wrapping-col right"></div>
                 </div>
-                <div class="upage-content ac0 content-area vertical-col left" id="page_20_5"><a class="widget uib_w_13 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnNeuesFoto" href="#Foto" data-transition="fade">Neues Foto</a><a class="widget uib_w_9 d-margins" data-uib="jquery_mobile/button"
-                    data-ver="0" data-role="button" id="btnMap" href="#Map" data-transition="fade">Map</a>
-                    <div class="tarea widget uib_w_10 d-margins" data-uib="media/text" data-ver="0" name="uib_w_10">
+                <div class="upage-content ac0 content-area vertical-col left" id="page_20_5"><a class="widget uib_w_13 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnNeuesFoto" href="#Foto" data-transition="fade">Neues Foto</a>
+                    <a class="widget uib_w_9 d-margins" data-uib="jquery_mobile/button"data-ver="0" data-role="button" id="btnMap" href="#Map" data-transition="fade">Map</a>
+                        <div class="tarea widget uib_w_10 d-margins" data-uib="media/text" data-ver="0" name="uib_w_10">
                         <div class="widget-container left-receptacle"></div>
                         <div class="widget-container right-receptacle"></div>
-                        <div class="text-container" id=txtHomescreenGPSCheckUp>
-                                <!-- Text via JavaScript -->
+                        <div class="text-container" id="txtHomescreenGPSCheckUp">
+                            <!-- Text via JavaScript -->
                         </div>
                     </div>
                     <div class="tarea widget uib_w_20 d-margins" data-uib="media/text" data-ver="0" name="uib_w_20">
@@ -132,7 +134,23 @@
                     <a class="ui-btn-left" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnHome" href="#Homescreen" data-transition="fade" data-icon="carat-l" data-iconpos="left" data-mini="true"></a>
                 </div>
                 <div class="upage-content ac0 content-area vertical-col left" id="page_18_21">
-                    <div class="widget uib_w_16 maps-size d-margins" data-uib="media/google_maps" data-ver="0" data-rpath="null" data-zoom="8"></div>
+                    <div id='map' style="height:300px">
+                        <script type="text/javascript">
+                            var map;
+                            function iniMap(){
+                                map = new google.maps.Map(document.getElementById('map'),{
+                                   center: {lat:-34,397,lng:150.644},
+                                    zomm:8
+
+                                });
+                            }
+
+                        </script>
+
+                    </div>
+                    <script async defer
+                            src="https://maps.googlapis.com/maps/api/js?key=AIzaSyDZlxvYWfTA2DNdWBhcvcMfX45dR2YMzgE&callback=initMap">
+                    </script>
                 </div>
             </div>
         </div>
@@ -143,7 +161,7 @@
                     <div class="widget-container wrapping-col single-centered"></div>
                     <div class="widget-container content-area horiz-area wrapping-col left"></div>
                     <div class="widget-container content-area horiz-area wrapping-col right"></div>
-                   <a class="ui-btn-left" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true" id="btnHome" href="#Homescreen" data-transition="fade" data-icon="carat-l" data-iconpos="notext"></a>
+                    <a class="ui-btn-left" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true" id="btnHome" href="#Homescreen" data-transition="fade" data-icon="carat-l" data-iconpos="notext"></a>
                 </div>
                 <div class="upage-content ac0 content-area vertical-col left" id="page_19_69">
                     <div class="widget scale-image uib_w_15 d-margins" data-uib="media/img" data-ver="0">
@@ -159,9 +177,15 @@
                         <div class="text-container" id="txtFotoGPSKoordinaten">
                             <!-- Text via JavaScript -->
                         </div>
-                    </div><a class="widget uib_w_15" data-uib="jquery_mobile/button" data-ver="0" data-role="button" onclick="capturePhoto('.uib_w_15 img')" data-icon="camera" data-iconpos="notext">Camera</a>
+                    </div><a class="widget uib_w_15" data-uib="jquery_mobile/button" data-ver="0" data-role="button" onclick="capturePhoto" data-icon="camera" data-iconpos="notext">Camera</a>
                     <a class="widget uib_w_18 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnVerwerfen">Foto verwerfen</a><a class="widget uib_w_19 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button"
                     id="btnSpeichern">speichern/hochladen</a>
+                       <form id='add-item'>
+                            <button type="submit">Add</button>
+                            <div><input type="text" id='new-item-text'placeholder='Enter new task'/></div>
+
+                    </form>
+
                 </div>
             </div>
         </div>
